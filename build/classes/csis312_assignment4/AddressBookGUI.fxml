@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import csis312_assignment4.custom.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1257.0" styleClass="dark-pane" stylesheets="@TopStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csis312_assignment4.FXMLController">
+   <children>
+      <Pane layoutX="13.0" layoutY="81.0" prefHeight="58.0" prefWidth="1230.0" styleClass="Button-color">
+         <children>
+            <NameTextFieldTwo fx:id="lastField" layoutX="175.0" layoutY="14.0" prefHeight="31.0" prefWidth="125.0" styleClass="SearchBar-color" />
+            <TextField fx:id="birthdayField" layoutX="318.0" layoutY="13.0" prefHeight="31.0" prefWidth="108.0" promptText="01/01/1997" styleClass="SearchBar-color" />
+            <TextField fx:id="addressField" layoutX="439.0" layoutY="13.0" prefHeight="31.0" prefWidth="529.0" promptText="1971 University Blvd, Lynchburg" styleClass="SearchBar-color" />
+            <StateTextField fx:id="stateField" layoutX="988.0" layoutY="14.0" prefHeight="31.0" prefWidth="77.0" styleClass="SearchBar-color" />
+            <ZipTextField fx:id="zipField" layoutX="1088.0" layoutY="13.0" prefHeight="31.0" prefWidth="108.0" styleClass="SearchBar-color" />
+            <NameTextField fx:id="firstField" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="133.0" styleClass="SearchBar-color" />
+         </children>
+      </Pane>
+      <ButtonBar layoutX="405.0" opacity="0.89" prefHeight="94.0" prefWidth="838.0">
+        <buttons>
+            <Button fx:id="buttonClear" defaultButton="true" mnemonicParsing="false" onAction="#handleButtonClear" prefHeight="32.0" prefWidth="113.0" styleClass="Button-color" text="Clear Search" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+          <Button fx:id="buttonFind" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="32.0" prefWidth="197.0" styleClass="Button-color" text="Find" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#handleButtonUpdate" styleClass="Button-color" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#handleButtonDelete" styleClass="Button-color" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="buttonOpen" mnemonicParsing="false" onAction="#handleButtonOpen" styleClass="Button-color" text="Open" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+        </buttons>
+      </ButtonBar>
+      <TableView fx:id="addressTable" editable="true" layoutX="13.0" layoutY="146.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleTableClick" prefHeight="440.0" prefWidth="1230.0" styleClass="Button-color" stylesheets="@TopStyle.css">
+        <columns>
+          <TableColumn fx:id="firstColumn" prefWidth="160.0" text="First" />
+          <TableColumn fx:id="lastColumn" prefWidth="146.0" text="Last" />
+            <TableColumn fx:id="birthdayColumn" prefWidth="129.0" text="Birthday" />
+            <TableColumn fx:id="addressColumn" prefWidth="551.0" text="Address" />
+            <TableColumn fx:id="stateColumn" minWidth="0.0" prefWidth="84.0" text="State" />
+            <TableColumn fx:id="zipColumn" minWidth="0.0" prefWidth="159.0" text="Zip" />
+        </columns>
+      </TableView>
+      <Label layoutX="13.0" layoutY="10.0" prefHeight="70.0" prefWidth="375.0" styleClass="label-bright" text="My Address Book" />
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

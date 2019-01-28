@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addresses>
+    <address>
+        <address>herp a derp lane</address>
+        <birthday>1/24/2001</birthday>
+        <first>Jane</first>
+        <last>Cook</last>
+        <state>NE</state>
+        <zip>22245</zip>
+    </address>
+</addresses>
